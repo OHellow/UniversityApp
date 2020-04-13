@@ -34,3 +34,10 @@
 //        return true
 //    }
 //}
+
+//enum UserDefaultsKeys {
+//    static let SignedIn = "SignedIn"
+//    static let LoggedIn = "LoggedIn"
+//    static let LoginSaved = "LoginSaved"
+//    static let PasswordSaved = "PasswordSaved"
+//}

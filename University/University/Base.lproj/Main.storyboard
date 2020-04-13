@@ -46,14 +46,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqC-jc-RGN">
-                                <rect key="frame" x="186" y="458" width="42" height="30"/>
-                                <state key="normal" title="Log in"/>
-                                <connections>
-                                    <action selector="LogInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y2Y-4K-DQ3"/>
-                                    <segue destination="BYm-Lh-9kO" kind="presentation" modalPresentationStyle="fullScreen" id="gCM-v1-FS4"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R4P-tf-vAF" userLabel="passwordTF">
                                 <rect key="frame" x="40" y="384" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -66,14 +58,12 @@
                             <constraint firstItem="hkG-wW-aYd" firstAttribute="top" secondItem="OkT-Vn-DxI" secondAttribute="bottom" constant="10" id="17S-pl-Ye6"/>
                             <constraint firstItem="ig9-Sl-CWy" firstAttribute="top" secondItem="R4P-tf-vAF" secondAttribute="bottom" constant="40" id="2fn-FJ-fdg"/>
                             <constraint firstItem="OkT-Vn-DxI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4pV-zN-mL0"/>
-                            <constraint firstItem="NqC-jc-RGN" firstAttribute="top" secondItem="R4P-tf-vAF" secondAttribute="bottom" constant="40" id="54o-lq-yNW"/>
                             <constraint firstItem="0D8-h4-cnf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A6k-qa-fmL"/>
                             <constraint firstItem="ig9-Sl-CWy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Edp-zS-jQw"/>
                             <constraint firstItem="OkT-Vn-DxI" firstAttribute="top" secondItem="0D8-h4-cnf" secondAttribute="bottom" constant="160" id="PQj-tR-YQa"/>
                             <constraint firstItem="0D8-h4-cnf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Stp-5h-EPx"/>
                             <constraint firstItem="R4P-tf-vAF" firstAttribute="leading" secondItem="lvn-ep-K9S" secondAttribute="leading" id="T4R-5W-QE9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hkG-wW-aYd" secondAttribute="trailing" constant="40" id="aBl-71-5Kf"/>
-                            <constraint firstItem="NqC-jc-RGN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="d13-n0-gpG"/>
                             <constraint firstItem="hkG-wW-aYd" firstAttribute="leading" secondItem="OkT-Vn-DxI" secondAttribute="leading" id="fFS-9b-pcc"/>
                             <constraint firstItem="R4P-tf-vAF" firstAttribute="top" secondItem="lvn-ep-K9S" secondAttribute="bottom" constant="10" id="nu0-6f-WGT"/>
                             <constraint firstItem="lvn-ep-K9S" firstAttribute="top" secondItem="hkG-wW-aYd" secondAttribute="bottom" constant="20" id="prV-PC-99Q"/>
@@ -83,7 +73,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="hMB-xY-q1c"/>
                     <connections>
-                        <outlet property="logInButton" destination="NqC-jc-RGN" id="SZq-ZY-uJE"/>
                         <outlet property="loginLabel" destination="OkT-Vn-DxI" id="ncU-tn-CtR"/>
                         <outlet property="loginTextField" destination="hkG-wW-aYd" id="GjH-zV-8vX"/>
                         <outlet property="passwordLabel" destination="lvn-ep-K9S" id="VOA-ah-xOh"/>
@@ -155,7 +144,4 @@
             <point key="canvasLocation" x="1094" y="114"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="gCM-v1-FS4"/>
-    </inferredMetricsTieBreakers>
 </document>
