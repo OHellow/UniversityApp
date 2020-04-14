@@ -111,6 +111,7 @@
                                 </state>
                                 <connections>
                                     <action selector="ToClassButtonTapped:" destination="BYm-Lh-9kO" eventType="touchUpInside" id="Mhi-Vt-Kdg"/>
+                                    <segue destination="JYk-rL-Cxf" kind="show" id="Teo-pG-SpI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYS-Fz-WNc">
@@ -141,7 +142,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7XU-cs-7Vh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="114"/>
+            <point key="canvasLocation" x="1106" y="114"/>
+        </scene>
+        <!--Users Collection View Controller-->
+        <scene sceneID="ru3-CL-O0H">
+            <objects>
+                <viewController id="JYk-rL-Cxf" customClass="UsersCollectionViewController" customModule="University" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G0d-Pi-4wg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="n6q-yy-tQS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E0I-0C-hm3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5Y-jA-WBH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1399" y="906"/>
         </scene>
     </scenes>
 </document>
