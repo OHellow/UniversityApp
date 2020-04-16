@@ -13,10 +13,10 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func fetchData(completion: @escaping (Any?) -> Void) {
+    func fetchData(page: String, completion: @escaping (Any?) -> Void) {
         
         let session = URLSession.shared
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else {return}
+        guard let url = URL(string: page) else {return}
 
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -36,6 +36,8 @@ class NetworkManager {
         }
         task.resume()
     }
+    
+    
 }
 
 struct User: Codable {

@@ -16,9 +16,13 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.setHidesBackButton(false, animated: true)
+         navigationController?.setNavigationBarHidden(true, animated: true)
         welcomeLabel.text = "Welcome, \(userName ?? "User")!"
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     @IBAction func ToClassButtonTapped(_ sender: Any) {
