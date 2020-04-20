@@ -21,24 +21,31 @@ class RegisterLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        //navigationController?.setNavigationBarHidden(true, animated: true)
         
         if UserDefaults.standard.object(forKey: "SignedIn") as? Bool == true {
             titleLabel.text = "Authorization"
             singInButton.setTitle("Log in", for: .normal)
-
         } else {
             titleLabel.text = "Registration"
             singInButton.setTitle("Sign in", for: .normal)
         }
+        
+//        let imageView = UIImageView(image: UIImage(named: "ninja"))
+//        view.addSubview(imageView)
+//        imageView.translatesAutoresizingMaskIntoConstraints = false
+//        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//        view.backgroundColor = UIColor(named: "Color")
     }
+
     
     @IBAction func SingInButtonTapped(_ sender: Any) {
-
-        if UserDefaults.standard.object(forKey: "SignedIn") as! Bool == false {
-            makeSignIn()
-        } else {
+        if UserDefaults.standard.object(forKey: "SignedIn") as? Bool == true {
             makeLogIn()
+        } else {
+            makeSignIn()
         }
     }
 }

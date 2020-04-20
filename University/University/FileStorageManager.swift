@@ -42,7 +42,7 @@ class FileStorageManager {
     }
     
     func makeMokup(login: String, password: String) -> LoginPassword {
-        LoginPassword(userPassword: [login:password])
+        LoginPassword(userPassword: [login : password])
     }
 }
 

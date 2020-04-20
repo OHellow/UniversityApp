@@ -12,6 +12,9 @@
 		83B797AC24448E490050D3DF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B797AB24448E490050D3DF /* Validator.swift */; };
 		83B797B02444C2850050D3DF /* FileStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B797AF2444C2850050D3DF /* FileStorageManager.swift */; };
 		83B797B224450C870050D3DF /* AlertsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B797B124450C870050D3DF /* AlertsFunctions.swift */; };
+		83B797B4244510040050D3DF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B797B3244510040050D3DF /* NetworkManager.swift */; };
+		83B797B62445B2590050D3DF /* UsersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B797B52445B2590050D3DF /* UsersCollectionViewController.swift */; };
+		83B797B82445B2820050D3DF /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B797B72445B2820050D3DF /* UserCollectionViewCell.swift */; };
 		83F5F8A32440CC8B00FF3DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F5F8A22440CC8B00FF3DF8 /* AppDelegate.swift */; };
 		83F5F8A52440CC8B00FF3DF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F5F8A42440CC8B00FF3DF8 /* SceneDelegate.swift */; };
 		83F5F8AA2440CC8B00FF3DF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F5F8A82440CC8B00FF3DF8 /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 		83B797AB24448E490050D3DF /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		83B797AF2444C2850050D3DF /* FileStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorageManager.swift; sourceTree = "<group>"; };
 		83B797B124450C870050D3DF /* AlertsFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsFunctions.swift; sourceTree = "<group>"; };
+		83B797B3244510040050D3DF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		83B797B52445B2590050D3DF /* UsersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCollectionViewController.swift; sourceTree = "<group>"; };
+		83B797B72445B2820050D3DF /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		83F5F89F2440CC8B00FF3DF8 /* University.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = University.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F5F8A22440CC8B00FF3DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83F5F8A42440CC8B00FF3DF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +74,10 @@
 				83F5F8A42440CC8B00FF3DF8 /* SceneDelegate.swift */,
 				83B797A5244477D60050D3DF /* RegisterLoginViewController.swift */,
 				83B797A9244477F00050D3DF /* WelcomeViewController.swift */,
+				83B797B52445B2590050D3DF /* UsersCollectionViewController.swift */,
+				83B797B72445B2820050D3DF /* UserCollectionViewCell.swift */,
 				83B797AF2444C2850050D3DF /* FileStorageManager.swift */,
+				83B797B3244510040050D3DF /* NetworkManager.swift */,
 				83B797B124450C870050D3DF /* AlertsFunctions.swift */,
 				83B797AB24448E490050D3DF /* Validator.swift */,
 				83F5F8A82440CC8B00FF3DF8 /* Main.storyboard */,
@@ -152,11 +161,14 @@
 			files = (
 				83F5F8A32440CC8B00FF3DF8 /* AppDelegate.swift in Sources */,
 				83F5F8A52440CC8B00FF3DF8 /* SceneDelegate.swift in Sources */,
+				83B797B62445B2590050D3DF /* UsersCollectionViewController.swift in Sources */,
 				83B797AA244477F00050D3DF /* WelcomeViewController.swift in Sources */,
 				83B797AC24448E490050D3DF /* Validator.swift in Sources */,
+				83B797B4244510040050D3DF /* NetworkManager.swift in Sources */,
 				83B797B02444C2850050D3DF /* FileStorageManager.swift in Sources */,
 				83B797A6244477D60050D3DF /* RegisterLoginViewController.swift in Sources */,
 				83B797B224450C870050D3DF /* AlertsFunctions.swift in Sources */,
+				83B797B82445B2820050D3DF /* UserCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
