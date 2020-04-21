@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		835B3889244E36EA0015149A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835B3888244E36EA0015149A /* SettingsViewController.swift */; };
 		83B797A6244477D60050D3DF /* RegisterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B797A5244477D60050D3DF /* RegisterLoginViewController.swift */; };
 		83B797AA244477F00050D3DF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B797A9244477F00050D3DF /* WelcomeViewController.swift */; };
 		83B797AC24448E490050D3DF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B797AB24448E490050D3DF /* Validator.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		835B3888244E36EA0015149A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		83B797A5244477D60050D3DF /* RegisterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLoginViewController.swift; sourceTree = "<group>"; };
 		83B797A9244477F00050D3DF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		83B797AB24448E490050D3DF /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -51,6 +53,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		835B388A244EF5790015149A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83B797A5244477D60050D3DF /* RegisterLoginViewController.swift */,
+				83B797A9244477F00050D3DF /* WelcomeViewController.swift */,
+				83B797B52445B2590050D3DF /* UsersCollectionViewController.swift */,
+				835B3888244E36EA0015149A /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		835B388B244EF59D0015149A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				83B797AF2444C2850050D3DF /* FileStorageManager.swift */,
+				83B797B3244510040050D3DF /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		835B388C244EF5AB0015149A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				83B797B72445B2820050D3DF /* UserCollectionViewCell.swift */,
+				83B797AB24448E490050D3DF /* Validator.swift */,
+				83B797B124450C870050D3DF /* AlertsFunctions.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		83F5F8962440CC8B00FF3DF8 = {
 			isa = PBXGroup;
 			children = (
@@ -72,14 +104,9 @@
 			children = (
 				83F5F8A22440CC8B00FF3DF8 /* AppDelegate.swift */,
 				83F5F8A42440CC8B00FF3DF8 /* SceneDelegate.swift */,
-				83B797A5244477D60050D3DF /* RegisterLoginViewController.swift */,
-				83B797A9244477F00050D3DF /* WelcomeViewController.swift */,
-				83B797B52445B2590050D3DF /* UsersCollectionViewController.swift */,
-				83B797B72445B2820050D3DF /* UserCollectionViewCell.swift */,
-				83B797AF2444C2850050D3DF /* FileStorageManager.swift */,
-				83B797B3244510040050D3DF /* NetworkManager.swift */,
-				83B797B124450C870050D3DF /* AlertsFunctions.swift */,
-				83B797AB24448E490050D3DF /* Validator.swift */,
+				835B388B244EF59D0015149A /* Managers */,
+				835B388A244EF5790015149A /* Controllers */,
+				835B388C244EF5AB0015149A /* Entities */,
 				83F5F8A82440CC8B00FF3DF8 /* Main.storyboard */,
 				83F5F8AB2440CC8E00FF3DF8 /* Assets.xcassets */,
 				83F5F8AD2440CC8E00FF3DF8 /* LaunchScreen.storyboard */,
@@ -161,6 +188,7 @@
 			files = (
 				83F5F8A32440CC8B00FF3DF8 /* AppDelegate.swift in Sources */,
 				83F5F8A52440CC8B00FF3DF8 /* SceneDelegate.swift in Sources */,
+				835B3889244E36EA0015149A /* SettingsViewController.swift in Sources */,
 				83B797B62445B2590050D3DF /* UsersCollectionViewController.swift in Sources */,
 				83B797AA244477F00050D3DF /* WelcomeViewController.swift in Sources */,
 				83B797AC24448E490050D3DF /* Validator.swift in Sources */,

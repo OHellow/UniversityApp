@@ -13,6 +13,8 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
+    private init() {}
+    
     func fetchData(page: String, completion: @escaping (Any?) -> Void) {
         
         let session = URLSession.shared
@@ -36,8 +38,6 @@ class NetworkManager {
         }
         task.resume()
     }
-    
-    
 }
 
 struct User: Codable {

@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let rootNavigationController = UINavigationController()
+       // let rootNavigationController = UINavigationController()
         var initialVC: UIViewController
         let signedIn = UserDefaults.standard.object(forKey: "SignedIn") as? Bool
         let loggedIn = UserDefaults.standard.object(forKey: "LoggedIn") as? Bool
@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             initialVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeVC")
         } else {
             initialVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegisterLoginViewController")
-            //UserDefaults.standard.set(false, forKey: "SignedIn")
+            UserDefaults.standard.set("default", forKey: "mode")
         }
         
 //        self.window?.rootViewController = rootNavigationController

@@ -22,8 +22,6 @@ class RegisterLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //navigationController?.setNavigationBarHidden(true, animated: true)
-        
         if UserDefaults.standard.object(forKey: "SignedIn") as? Bool == true {
             titleLabel.text = "Authorization"
             singInButton.setTitle("Log in", for: .normal)
@@ -31,16 +29,21 @@ class RegisterLoginViewController: UIViewController {
             titleLabel.text = "Registration"
             singInButton.setTitle("Sign in", for: .normal)
         }
-        
-//        let imageView = UIImageView(image: UIImage(named: "ninja"))
-//        view.addSubview(imageView)
-//        imageView.translatesAutoresizingMaskIntoConstraints = false
-//        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-//        view.backgroundColor = UIColor(named: "Color")
+        if let mode = UserDefaults.standard.object(forKey: "mode") as? String {
+            if mode == "default" {
+                overrideUserInterfaceStyle = .unspecified
+            } else {
+                if let userMode = UserDefaults.standard.object(forKey: "mode") as? String {
+                    if userMode == "dark" {
+                        overrideUserInterfaceStyle = .dark
+                    } else {
+                        overrideUserInterfaceStyle = .light
+                    }
+                }
+            }
+        }
     }
 
-    
     @IBAction func SingInButtonTapped(_ sender: Any) {
         if UserDefaults.standard.object(forKey: "SignedIn") as? Bool == true {
             makeLogIn()
@@ -70,3 +73,25 @@ extension RegisterLoginViewController {
         }
     }
 }
+
+//extension UIColor {
+//    static func color(_ red: Int, _ green: Int, _ blue: Int) {
+//        UIColor(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1.0)
+//    }
+//
+//    static func appMainColor() {
+//        UIColor.color(1, 2, 3)
+//    }
+//
+//    enum Color {
+//        case one
+//    }
+//
+//    convenience init(color:Color) {
+//        self.init()
+//    }
+//}
+//
+//extension UIViewController {
+//
+//}
