@@ -50,18 +50,11 @@ extension UserCollectionViewCell {
         imageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 2/3).isActive = true
         userName.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5).isActive = true
         userName.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        //userName.widthAnchor.constraint(equalToConstant: Constants.itemWidth*0.9).isActive = true
-//        userName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
-//        userName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5).isActive = true
         userName.heightAnchor.constraint(equalToConstant: 20).isActive = true
         userName.textAlignment = .center
         userCity.topAnchor.constraint(equalTo: userName.bottomAnchor, constant: 5).isActive = true
         userCity.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         userCity.heightAnchor.constraint(equalToConstant: 20).isActive = true
-//        userEmail.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
-//        userEmail.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5).isActive = true
-        //userEmail.widthAnchor.constraint(equalToConstant: Constants.itemWidth*0.9).isActive = true
-        //userEmail.numberOfLines = 0
     }
 }
 

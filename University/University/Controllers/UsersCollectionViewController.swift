@@ -28,14 +28,25 @@ class UsersCollectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let mode = UserDefaults.standard.object(forKey: "mode") as? String {
+            if mode == "default" {
+                overrideUserInterfaceStyle = .unspecified
+            } else {
+                if let userMode = UserDefaults.standard.object(forKey: "mode") as? String {
+                    if userMode == "dark" {
+                        overrideUserInterfaceStyle = .dark
+                    } else {
+                        overrideUserInterfaceStyle = .light
+                    }
+                }
+            }
+        }
+        
         if UsersCollectionViewController.usersData.isEmpty {
-            NetworkManager.shared.fetchData(page: page,completion: {(data) in
+            NetworkManager.shared.fetchData(page: page,completion: { (data) in
             (data as? Array<User>)?.forEach({print($0)})
             (data as? Array<User>)?.forEach({UsersCollectionViewController.usersData.append(User(id: $0.id, name: $0.name, email: $0.email, address: $0.address))})
-//            print(RegisterLoginViewController.mass)
-//            var stud = RegisterLoginViewController.mass[1]
-//            var a = stud.address.city
-//            print(a)
             DispatchQueue.main.async {
             self.collectionView.reloadData()
             }
