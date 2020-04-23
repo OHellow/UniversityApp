@@ -29,20 +29,6 @@ class UsersCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let mode = UserDefaults.standard.object(forKey: "mode") as? String {
-            if mode == "default" {
-                overrideUserInterfaceStyle = .unspecified
-            } else {
-                if let userMode = UserDefaults.standard.object(forKey: "mode") as? String {
-                    if userMode == "dark" {
-                        overrideUserInterfaceStyle = .dark
-                    } else {
-                        overrideUserInterfaceStyle = .light
-                    }
-                }
-            }
-        }
-        
         if UsersCollectionViewController.usersData.isEmpty {
             NetworkManager.shared.fetchData(page: page,completion: { (data) in
             (data as? Array<User>)?.forEach({print($0)})

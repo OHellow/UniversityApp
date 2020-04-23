@@ -29,19 +29,7 @@ class RegisterLoginViewController: UIViewController {
             titleLabel.text = "Registration"
             singInButton.setTitle("Sign in", for: .normal)
         }
-        if let mode = UserDefaults.standard.object(forKey: "mode") as? String {
-            if mode == "default" {
-                overrideUserInterfaceStyle = .unspecified
-            } else {
-                if let userMode = UserDefaults.standard.object(forKey: "mode") as? String {
-                    if userMode == "dark" {
-                        overrideUserInterfaceStyle = .dark
-                    } else {
-                        overrideUserInterfaceStyle = .light
-                    }
-                }
-            }
-        }
+        self.parent?.overrideUserInterfaceStyle = Mode.setMode()
     }
 
     @IBAction func SingInButtonTapped(_ sender: Any) {
@@ -50,6 +38,8 @@ class RegisterLoginViewController: UIViewController {
         } else {
             makeSignIn()
         }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        self.present(storyboard.instantiateViewController(identifier: "WelcomeNVC"), animated: true, completion: nil)
     }
 }
 

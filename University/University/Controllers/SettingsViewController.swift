@@ -23,20 +23,14 @@ class SettingsViewController: UIViewController {
                 userModeSwitch.isHidden = true
                 userModeLabel.isHidden = true
                 defaultModeSwitch.isOn = true
-                overrideUserInterfaceStyle = .unspecified
-                self.parent?.overrideUserInterfaceStyle = .unspecified
             } else {
                 defaultModeSwitch.isOn = false
                 userModeSwitch.isHidden = false
                 userModeLabel.isHidden = false
                 if let userMode = UserDefaults.standard.object(forKey: "mode") as? String {
                     if userMode == "dark" {
-                        overrideUserInterfaceStyle = .dark
-                        self.parent?.overrideUserInterfaceStyle = .dark
                         userModeSwitch.isOn = true
                     } else {
-                        overrideUserInterfaceStyle = .light
-                        self.parent?.overrideUserInterfaceStyle = .light
                          userModeSwitch.isOn = false
                     }
                 }
@@ -69,14 +63,14 @@ class SettingsViewController: UIViewController {
     
     @IBAction func userModeSwitched(_ sender: UISwitch) {
         self.parent?.overrideUserInterfaceStyle = sender.isOn ? .dark : .light
-        UserDefaults.standard.set(sender.isOn ? "dark" : "light", forKey: "mode")
-        
         if sender.isOn {
             overrideUserInterfaceStyle = .dark
-            self.parent?.overrideUserInterfaceStyle = .dark
+            //self.parent?.overrideUserInterfaceStyle = .dark
+            UserDefaults.standard.set("dark", forKey: "mode")
         } else {
             overrideUserInterfaceStyle = .light
-            self.parent?.overrideUserInterfaceStyle = .light
+            //self.parent?.overrideUserInterfaceStyle = .light
+            UserDefaults.standard.set("light", forKey: "mode")
         }
     }
 }
