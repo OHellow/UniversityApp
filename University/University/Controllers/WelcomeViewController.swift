@@ -17,6 +17,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(userName ?? "User")!"
+        self.parent?.overrideUserInterfaceStyle = Mode.setMode()
     }
     
     @IBAction func ToClassButtonTapped(_ sender: Any) {
@@ -28,3 +29,4 @@ class WelcomeViewController: UIViewController {
     
 
 }
+

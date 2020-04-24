@@ -11,28 +11,25 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var rootViewControllerIdentificator: String?
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windowScene)
         
-       // let rootNavigationController = UINavigationController()
-        var initialVC: UIViewController
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        self.window = UIWindow(windowScene: windowScene)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         let signedIn = UserDefaults.standard.object(forKey: "SignedIn") as? Bool
         let loggedIn = UserDefaults.standard.object(forKey: "LoggedIn") as? Bool
         if (signedIn == true) && (loggedIn == true) {
-            initialVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeVC")
+            rootViewControllerIdentificator = "WelcomeNVC"
         } else {
-            initialVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegisterLoginViewController")
+            rootViewControllerIdentificator = "StartNVC"
             UserDefaults.standard.set("default", forKey: "mode")
         }
         
-//        self.window?.rootViewController = rootNavigationController
-//        self.window?.makeKeyAndVisible()
-//        rootNavigationController.pushViewController(initialVC, animated: false)
-        self.window?.rootViewController = UINavigationController(rootViewController: initialVC)
-        self.window?.makeKeyAndVisible()
+        window?.rootViewController = storyboard.instantiateViewController(identifier: rootViewControllerIdentificator ?? "WelcomeNVC")
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
